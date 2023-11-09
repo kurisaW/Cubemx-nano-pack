@@ -1,2 +1,3 @@
-# RT-Thread-Nano
-nano 新版本适配
+# Cubemx_rt-thread_nano_pack
+STM32Cubemx nano pack版本更新
+ 
