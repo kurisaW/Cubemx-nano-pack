@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package schemaVersion="1.7.2" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+    <vendor>RealThread</vendor>
+    <name>RT-Thread::FROM_PACK_GENERATED::NO_CUBE_RULES</name>
+    <description>RT-Thread Software Components</description>
+    <url>https://www.rt-thread.org/download/cube/</url>
+    <license>D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/License.txt::License.txt</license>
+    <supportContact>https://www.rt-thread.org</supportContact>
+    <releases>
+        <release date="2023-11-08" version="4.1.1">
+	Updated to RT-Thread 4.1.1</release>
+        <release date="2021-06-17" version="3.1.5">
+        Updated to RT-Thread 3.1.5
+        Add M23/M33 core</release>
+        <release date="2019-11-11" version="3.1.3">
+        Updated to RT-Thread 3.1.3
+        Add RISC-V example
+       </release>
+        <release date="2019-01-29" version="3.1.2">
+        Updated to RT-Thread 3.1.2
+        </release>
+        <release date="2018-11-16" version="3.1.1">
+      first release
+    </release>
+    </releases>
+    <keywords>
+        <keyword>rt-thread</keyword>
+        <keyword>rtthread</keyword>
+        <keyword>rtt</keyword>
+        <keyword>IMPLEMENTED_WITH_STM32CUBEMX</keyword>
+    </keywords>
+    <taxonomy>
+        <description Cclass="RTOS">RTOS</description>
+    </taxonomy>
+    <conditions>
+        <condition id="ARM Compiler">
+            <require Tcompiler="ARMCC"/>
+        </condition>
+        <condition id="Cortex-M">
+            <accept Dcore="Cortex-M0"/>
+            <accept Dcore="Cortex-M0+"/>
+            <accept Dcore="Cortex-M3"/>
+            <accept Dcore="Cortex-M4"/>
+            <accept Dcore="Cortex-M7"/>
+            <accept Dcore="Cortex-M33"/>
+            <accept Dcore="Cortex-M23"/>
+        </condition>
+        <condition id="CM0">
+            <description>Cortex-M0 based device</description>
+            <accept Dcore="Cortex-M0"/>
+            <accept Dcore="Cortex-M0+"/>
+        </condition>
+        <condition id="CM3">
+            <description>Cortex-M3 based device</description>
+            <accept Dcore="Cortex-M3"/>
+        </condition>
+        <condition id="CM4">
+            <description>Cortex-M4 based device</description>
+            <accept Dcore="Cortex-M4"/>
+        </condition>
+        <condition id="CM7">
+            <description>Cortex-M7 based device</description>
+            <accept Dcore="Cortex-M7"/>
+        </condition>
+        <condition id="CM0_GCC">
+            <accept Dcore="Cortex-M0"/>
+            <accept Dcore="Cortex-M0+"/>
+            <require Tcompiler="GCC"/>
+        </condition>
+        <condition id="CM0_IAR">
+            <accept Dcore="Cortex-M0"/>
+            <accept Dcore="Cortex-M0+"/>
+            <require Tcompiler="IAR"/>
+        </condition>
+        <condition id="CM0_KEIL">
+            <accept Dcore="Cortex-M0"/>
+            <accept Dcore="Cortex-M0+"/>
+            <require Tcompiler="ARMCC"/>
+        </condition>
+        <condition id="CM3_GCC">
+            <require Dcore="Cortex-M3"/>
+            <require Tcompiler="GCC"/>
+        </condition>
+        <condition id="CM3_IAR">
+            <require Dcore="Cortex-M3"/>
+            <require Tcompiler="IAR"/>
+        </condition>
+        <condition id="CM3_KEIL">
+            <require Dcore="Cortex-M3"/>
+            <require Tcompiler="ARMCC"/>
+        </condition>
+        <condition id="CM4_GCC">
+            <require Dcore="Cortex-M4"/>
+            <require Tcompiler="GCC"/>
+        </condition>
+        <condition id="CM4_IAR">
+            <require Dcore="Cortex-M4"/>
+            <require Tcompiler="IAR"/>
+        </condition>
+        <condition id="CM4_KEIL">
+            <require Dcore="Cortex-M4"/>
+            <require Tcompiler="ARMCC"/>
+        </condition>
+        <condition id="CM7_GCC">
+            <require Dcore="Cortex-M7"/>
+            <require Tcompiler="GCC"/>
+        </condition>
+        <condition id="CM7_IAR">
+            <require Dcore="Cortex-M7"/>
+            <require Tcompiler="IAR"/>
+        </condition>
+        <condition id="CM7_KEIL">
+            <require Dcore="Cortex-M7"/>
+            <require Tcompiler="ARMCC"/>
+        </condition>
+        <condition id="CMSIS Core with RTOS">
+            <description>CMSIS Core with RTOS for Cortex-M processor</description>
+            <accept condition="Cortex-M"/>
+        </condition>
+        <condition id="CM23">
+            <description>Cortex-M23 based device</description>
+            <accept Dcore="Cortex-M23"/>
+        </condition>
+        <condition id="CM33">
+            <description>Cortex-M33 based device</description>
+            <accept Dcore="Cortex-M33"/>
+        </condition>
+        <condition id="CM23_GCC">
+            <require Tcompiler="GCC"/>
+            <require Dcore="Cortex-M23"/>
+        </condition>
+        <condition id="CM23_IAR">
+            <require Tcompiler="IAR"/>
+            <require Dcore="Cortex-M23"/>
+        </condition>
+        <condition id="CM23_KEIL">
+            <require Tcompiler="ARMCC"/>
+            <require Dcore="Cortex-M23"/>
+        </condition>
+        <condition id="CM33_GCC">
+            <require Tcompiler="GCC"/>
+            <require Dcore="Cortex-M33"/>
+        </condition>
+        <condition id="CM33_IAR">
+            <require Tcompiler="IAR"/>
+            <require Dcore="Cortex-M33"/>
+        </condition>
+        <condition id="CM33_KEIL">
+            <require Tcompiler="ARMCC"/>
+            <require Dcore="Cortex-M33"/>
+        </condition>
+    </conditions>
+    <components>
+        <component Cclass="RTOS" Cgroup="kernel" Cversion="4.1.1" condition="CMSIS Core with RTOS" maxInstances="1">
+            <description>rt-thread kernel files</description>
+            <files>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/clock.c::src/clock.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/components.c::src/components.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/cpu.c::src/cpu.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/idle.c::src/idle.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/ipc.c::src/ipc.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/irq.c::src/irq.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/kservice.c::src/kservice.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/mem.c::src/mem.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/memheap.c::src/memheap.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/mempool.c::src/mempool.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/object.c::src/object.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/scheduler.c::src/scheduler.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/signal.c::src/signal.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/slab.c::src/slab.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/thread.c::src/thread.c" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/src/timer.c::src/timer.c" public="false"/>
+                <file category="sourceAsm" condition="CM0_GCC" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m0/context_gcc.S::libcpu/arm/cortex-m0/context_gcc.S" public="false"/>
+                <file category="sourceAsm" condition="CM0_IAR" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m0/context_iar.S::libcpu/arm/cortex-m0/context_iar.S" public="false"/>
+                <file category="sourceAsm" condition="CM0_KEIL" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m0/context_rvds.S::libcpu/arm/cortex-m0/context_rvds.S" public="false"/>
+                <file category="source" condition="CM0" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m0/cpuport.c::libcpu/arm/cortex-m0/cpuport.c" public="false"/>
+                <file category="sourceAsm" condition="CM23_GCC" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m23/context_gcc.S::libcpu/arm/cortex-m23/context_gcc.S" public="false"/>
+                <file category="sourceAsm" condition="CM23_IAR" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m23/context_iar.S::libcpu/arm/cortex-m23/context_iar.S" public="false"/>
+                <file category="sourceAsm" condition="CM23_KEIL" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m23/context_rvds.S::libcpu/arm/cortex-m23/context_rvds.S" public="false"/>
+                <file category="source" condition="CM23" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m23/cpuport.c::libcpu/arm/cortex-m23/cpuport.c" public="false"/>
+                <file category="sourceAsm" condition="CM3_GCC" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m3/context_gcc.S::libcpu/arm/cortex-m3/context_gcc.S" public="false"/>
+                <file category="sourceAsm" condition="CM3_IAR" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m3/context_iar.S::libcpu/arm/cortex-m3/context_iar.S" public="false"/>
+                <file category="sourceAsm" condition="CM3_KEIL" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m3/context_rvds.S::libcpu/arm/cortex-m3/context_rvds.S" public="false"/>
+                <file category="source" condition="CM3" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m3/cpuport.c::libcpu/arm/cortex-m3/cpuport.c" public="false"/>
+                <file category="sourceAsm" condition="CM33_GCC" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/context_gcc.S::libcpu/arm/cortex-m33/context_gcc.S" public="false"/>
+                <file category="sourceAsm" condition="CM33_IAR" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/context_iar.S::libcpu/arm/cortex-m33/context_iar.S" public="false"/>
+                <file category="sourceAsm" condition="CM33_KEIL" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/context_rvds.S::libcpu/arm/cortex-m33/context_rvds.S" public="false"/>
+                <file category="source" condition="CM33" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/cpuport.c::libcpu/arm/cortex-m33/cpuport.c" public="false"/>
+                <file category="sourceAsm" condition="CM33_GCC" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/syscall_gcc.S::libcpu/arm/cortex-m33/syscall_gcc.S" public="false"/>
+                <file category="sourceAsm" condition="CM33_IAR" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/syscall_iar.S::libcpu/arm/cortex-m33/syscall_iar.S" public="false"/>
+                <file category="sourceAsm" condition="CM33_KEIL" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/syscall_rvds.S::libcpu/arm/cortex-m33/syscall_rvds.S" public="false"/>
+                <file category="source" condition="CM33" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m33/trustzone.c::libcpu/arm/cortex-m33/trustzone.c" public="false"/>
+                <file category="sourceAsm" condition="CM4_GCC" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m4/context_gcc.S::libcpu/arm/cortex-m4/context_gcc.S" public="false"/>
+                <file category="sourceAsm" condition="CM4_IAR" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m4/context_iar.S::libcpu/arm/cortex-m4/context_iar.S" public="false"/>
+                <file category="sourceAsm" condition="CM4_KEIL" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m4/context_rvds.S::libcpu/arm/cortex-m4/context_rvds.S" public="false"/>
+                <file category="source" condition="CM4" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m4/cpuport.c::libcpu/arm/cortex-m4/cpuport.c" public="false"/>
+                <file category="sourceAsm" condition="CM7_GCC" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m7/context_gcc.S::libcpu/arm/cortex-m7/context_gcc.S" public="false"/>
+                <file category="sourceAsm" condition="CM7_IAR" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m7/context_iar.S::libcpu/arm/cortex-m7/context_iar.S" public="false"/>
+                <file category="sourceAsm" condition="CM7_KEIL" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m7/context_rvds.S::libcpu/arm/cortex-m7/context_rvds.S" public="false"/>
+                <file category="source" condition="CM7" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m7/cpuport.c::libcpu/arm/cortex-m7/cpuport.c" public="false"/>
+                <file category="source" condition="CM7" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/libcpu/arm/cortex-m7/cpu_cache.c::libcpu/arm/cortex-m7/cpu_cache.c" public="false"/>
+                <file category="include" condition="CMSIS Core with RTOS" name="D:\Desktop\nano-v4.1.1\nano-v4.1.1\.project\OriginalPack\include\::include\" public="false"/>
+                <file category="source" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/_template/cubemx_config/board.c::bsp/_template/cubemx_config/board.c" public="false"/>
+                <file category="header" condition="CMSIS Core with RTOS" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/_template/cubemx_config/rtconfig.h::bsp/_template/cubemx_config/rtconfig.h" public="false"/>
+            </files>
+        </component>
+        <component Cclass="RTOS" Cgroup="shell" Cversion="4.1.1" condition="CMSIS Core with RTOS" maxInstances="1">
+            <description>rt-thread finsh files</description>
+            <files>
+                <file category="include" name="D:\Desktop\nano-v4.1.1\nano-v4.1.1\.project\OriginalPack\finsh\::finsh\"/>
+                <file category="source" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/cmd.c::components/finsh/cmd.c"/>
+                <file category="header" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/finsh.h::components/finsh/finsh.h"/>
+                <file category="header" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/finsh_config.h::components/finsh/finsh_config.h"/>
+                <file category="source" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/msh.c::components/finsh/msh.c"/>
+                <file category="header" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/msh.h::components/finsh/msh.h"/>
+                <file category="source" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/msh_file.c::components/finsh/msh_file.c"/>
+                <file category="source" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/msh_parse.c::components/finsh/msh_parse.c"/>
+                <file category="header" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/msh_parse.h::components/finsh/msh_parse.h"/>
+                <file category="source" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/shell.c::components/finsh/shell.c"/>
+                <file category="header" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/finsh/shell.h::components/finsh/shell.h"/>
+            </files>
+        </component>
+        <component Cclass="RTOS" Cgroup="device" Cversion="4.1.1" maxInstances="1">
+            <description>rt-thread device</description>
+            <files>
+                <file category="source" name="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/components/device/device.c::components/device/device.c"/>
+            </files>
+        </component>
+    </components>
+    <examples>
+        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/stm32f103-blink::bsp/stm32f103-blink" name="rt-thread blinky-hal">
+            <description>rt-thread blink example [hal]</description>
+            <board name="NUCLEO-F103RB" vendor="STMicroelectronics"/>
+            <project>
+                <environment load="Project.uvprojx" name="uv"/>
+            </project>
+            <attributes>
+                <component Cclass="rtthread" Cgroup="Kernel"/>
+                <category>Getting Started</category>
+                <category>rt-thread</category>
+            </attributes>
+        </example>
+        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/stm32f103-ll-blink::bsp/stm32f103-ll-blink" name="rt-thread blinky-ll">
+            <description>rt-thread blink example [ll]</description>
+            <board name="NUCLEO-F103RB" vendor="STMicroelectronics"/>
+            <project>
+                <environment load="Project.uvprojx" name="uv"/>
+            </project>
+            <attributes>
+                <component Cclass="rtthread" Cgroup="Kernel"/>
+                <category>Getting Started</category>
+                <category>rt-thread</category>
+            </attributes>
+        </example>
+        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/stm32f103-msh::bsp/stm32f103-msh" name="rt-thread msh-hal">
+            <description>rt-thread msh example [hal]</description>
+            <board name="NUCLEO-F103RB" vendor="STMicroelectronics"/>
+            <project>
+                <environment load="Project.uvprojx" name="uv"/>
+            </project>
+            <attributes>
+                <component Cclass="rtthread" Cgroup="Kernel"/>
+                <category>Getting Started</category>
+                <category>rt-thread</category>
+            </attributes>
+        </example>
+    </examples>
+</package>

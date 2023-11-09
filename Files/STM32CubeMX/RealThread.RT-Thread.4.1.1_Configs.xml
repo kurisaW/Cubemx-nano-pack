@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" DBVersion="V4.0" Name="RT-Thread" RootFolder="Packs/RealThread/RT-Thread/4.1.1/" Version="4.1.1" ns0:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/thirdPartyDb.xsd">
+    <RefConfig Name="RTOSJjkernel">
+        <Component Name="RTOS:kernel:$RTOSJjkernel"/>
+        <ConfigFile Name="RTCONFIG_H"/>
+        <ConfigFile Name="RTOSJjkernel_conf"/>
+    </RefConfig>
+    <RefConfig Name="RTOSJjshell">
+        <Component Name="RTOS:shell:$RTOSJjshell"/>
+    </RefConfig>
+    <RefConfig Name="RTOSJjdevice">
+        <Component Name="RTOS:device:$RTOSJjdevice"/>
+    </RefConfig>
+    <RefConfigFile Added="true" Description="rt-thread config header file." Name="RTCONFIG_H" Template="rtconfig_h.ftl" destinationFolder="RT-Thread">
+        <File Category="header" Condition="all" Name="./rtconfig.h"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_THREAD_PRIORITY_MAX" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_NAME_MAX" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_COMPONENTS_INIT" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_CONSOLEBUF_SIZE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_TIMER_THREAD_STACK_SIZE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_USER_MAIN" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_DEBUG" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_SEMAPHORE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_TINY_SIZE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_TIMER_SOFT" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_DEVICE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_TICK_PER_SECOND" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_HEAP" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_IDLE_HOOK" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_ALIGN_SIZE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_MEMPOOL" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_EVENT" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_CONSOLE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_DEBUG_INIT" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_MESSAGEQUEUE" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_OVERFLOW_CHECK" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_HOOK" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_MUTEX" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_MAILBOX" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_TIMER_THREAD_PRIO" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_SMALL_MEM" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_MAIN_THREAD_STACK_SIZE" OptimizationCondition="equal"/>
+    </RefConfigFile>
+    <RefConfigFile Added="true" Name="RTOSJjkernel_conf" Template="default_conf.ftl">
+        <File Category="header" Condition="all" Name="./RealThread.RT-Thread_conf.h"/>
+        <Argument AddressOf="false" Comment="RT_USING_SIGNALS" GenericType="simple" Name="RT_USING_SIGNALS" OptimizationCondition="equal"/>
+    </RefConfigFile>
+    <RefComponent Cclass="RTOS" Cgroup="kernel" Cversion="4Gg1Gg1">
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/clock.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/components.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/cpu.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/idle.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/ipc.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/irq.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/kservice.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/mem.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/memheap.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/mempool.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/object.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/scheduler.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/signal.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/slab.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/thread.c"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/timer.c"/>
+        <File Category="sourceAsm" Condition="CM0_GCC;(SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh) &amp; (SIiTcompilerIiGCC)" Name="libcpu/arm/cortex-m0/context_gcc.S"/>
+        <File Category="sourceAsm" Condition="CM0_IAR;(SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh) &amp; (SIiTcompilerIiIAR)" Name="libcpu/arm/cortex-m0/context_iar.S"/>
+        <File Category="sourceAsm" Condition="CM0_KEIL;(SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh) &amp; (SIiTcompilerIiARMCC)" Name="libcpu/arm/cortex-m0/context_rvds.S"/>
+        <File Category="source" Condition="CM0;(SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh)" Name="libcpu/arm/cortex-m0/cpuport.c"/>
+        <File Category="sourceAsm" Condition="CM23_GCC;(SIiTcompilerIiGCC&amp;SIiDcoreIiCortexAaM23)" Name="libcpu/arm/cortex-m23/context_gcc.S"/>
+        <File Category="sourceAsm" Condition="CM23_IAR;(SIiTcompilerIiIAR&amp;SIiDcoreIiCortexAaM23)" Name="libcpu/arm/cortex-m23/context_iar.S"/>
+        <File Category="sourceAsm" Condition="CM23_KEIL;(SIiTcompilerIiARMCC&amp;SIiDcoreIiCortexAaM23)" Name="libcpu/arm/cortex-m23/context_rvds.S"/>
+        <File Category="source" Condition="CM23;(SIiDcoreIiCortexAaM23)" Name="libcpu/arm/cortex-m23/cpuport.c"/>
+        <File Category="sourceAsm" Condition="CM3_GCC;(SIiDcoreIiCortexAaM3&amp;SIiTcompilerIiGCC)" Name="libcpu/arm/cortex-m3/context_gcc.S"/>
+        <File Category="sourceAsm" Condition="CM3_IAR;(SIiDcoreIiCortexAaM3&amp;SIiTcompilerIiIAR)" Name="libcpu/arm/cortex-m3/context_iar.S"/>
+        <File Category="sourceAsm" Condition="CM3_KEIL;(SIiDcoreIiCortexAaM3&amp;SIiTcompilerIiARMCC)" Name="libcpu/arm/cortex-m3/context_rvds.S"/>
+        <File Category="source" Condition="CM3;(SIiDcoreIiCortexAaM3)" Name="libcpu/arm/cortex-m3/cpuport.c"/>
+        <File Category="sourceAsm" Condition="CM33_GCC;(SIiTcompilerIiGCC&amp;SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/context_gcc.S"/>
+        <File Category="sourceAsm" Condition="CM33_IAR;(SIiTcompilerIiIAR&amp;SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/context_iar.S"/>
+        <File Category="sourceAsm" Condition="CM33_KEIL;(SIiTcompilerIiARMCC&amp;SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/context_rvds.S"/>
+        <File Category="source" Condition="CM33;(SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/cpuport.c"/>
+        <File Category="sourceAsm" Condition="CM33_GCC;(SIiTcompilerIiGCC&amp;SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/syscall_gcc.S"/>
+        <File Category="sourceAsm" Condition="CM33_IAR;(SIiTcompilerIiIAR&amp;SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/syscall_iar.S"/>
+        <File Category="sourceAsm" Condition="CM33_KEIL;(SIiTcompilerIiARMCC&amp;SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/syscall_rvds.S"/>
+        <File Category="source" Condition="CM33;(SIiDcoreIiCortexAaM33)" Name="libcpu/arm/cortex-m33/trustzone.c"/>
+        <File Category="sourceAsm" Condition="CM4_GCC;(SIiDcoreIiCortexAaM4&amp;SIiTcompilerIiGCC)" Name="libcpu/arm/cortex-m4/context_gcc.S"/>
+        <File Category="sourceAsm" Condition="CM4_IAR;(SIiDcoreIiCortexAaM4&amp;SIiTcompilerIiIAR)" Name="libcpu/arm/cortex-m4/context_iar.S"/>
+        <File Category="sourceAsm" Condition="CM4_KEIL;(SIiDcoreIiCortexAaM4&amp;SIiTcompilerIiARMCC)" Name="libcpu/arm/cortex-m4/context_rvds.S"/>
+        <File Category="source" Condition="CM4;(SIiDcoreIiCortexAaM4)" Name="libcpu/arm/cortex-m4/cpuport.c"/>
+        <File Category="sourceAsm" Condition="CM7_GCC;(SIiDcoreIiCortexAaM7&amp;SIiTcompilerIiGCC)" Name="libcpu/arm/cortex-m7/context_gcc.S"/>
+        <File Category="sourceAsm" Condition="CM7_IAR;(SIiDcoreIiCortexAaM7&amp;SIiTcompilerIiIAR)" Name="libcpu/arm/cortex-m7/context_iar.S"/>
+        <File Category="sourceAsm" Condition="CM7_KEIL;(SIiDcoreIiCortexAaM7&amp;SIiTcompilerIiARMCC)" Name="libcpu/arm/cortex-m7/context_rvds.S"/>
+        <File Category="source" Condition="CM7;(SIiDcoreIiCortexAaM7)" Name="libcpu/arm/cortex-m7/cpuport.c"/>
+        <File Category="source" Condition="CM7;(SIiDcoreIiCortexAaM7)" Name="libcpu/arm/cortex-m7/cpu_cache.c"/>
+        <File Category="include" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="include/"/>
+        <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="bsp/_template/cubemx_config/board.c"/>
+        <File Category="header" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="bsp/_template/cubemx_config/rtconfig.h"/>
+    </RefComponent>
+    <RefComponent Cclass="RTOS" Cgroup="shell" Cversion="4Gg1Gg1">
+        <File Category="include" Condition="" Name="finsh/"/>
+        <File Category="source" Condition="" Name="components/finsh/cmd.c"/>
+        <File Category="header" Condition="" Name="components/finsh/finsh.h"/>
+        <File Category="header" Condition="" Name="components/finsh/finsh_config.h"/>
+        <File Category="source" Condition="" Name="components/finsh/msh.c"/>
+        <File Category="header" Condition="" Name="components/finsh/msh.h"/>
+        <File Category="source" Condition="" Name="components/finsh/msh_file.c"/>
+        <File Category="source" Condition="" Name="components/finsh/msh_parse.c"/>
+        <File Category="header" Condition="" Name="components/finsh/msh_parse.h"/>
+        <File Category="source" Condition="" Name="components/finsh/shell.c"/>
+        <File Category="header" Condition="" Name="components/finsh/shell.h"/>
+    </RefComponent>
+    <RefComponent Cclass="RTOS" Cgroup="device" Cversion="4Gg1Gg1">
+        <File Category="source" Condition="" Name="components/device/device.c"/>
+    </RefComponent>
+</IP>
