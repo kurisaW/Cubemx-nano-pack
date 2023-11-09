@@ -74,6 +74,10 @@
                 [#assign RT_USING_MUTEX_value = value]
             [/#if]
 
+            [#if name = "RT_USING_SIGNALS"]
+                [#assign RT_USING_SIGNALS_value = value]
+            [/#if]
+
             [#if name = "RT_USING_EVENT"]
                 [#assign RT_USING_EVENT_value = value]
             [/#if]
@@ -209,6 +213,11 @@
 // <c1>Using Mutex
 //  <i>Using Mutex
 [#if RT_USING_MUTEX_value == "0"]//[/#if]#define RT_USING_MUTEX
+// </c>
+
+// <c1>Using Signal
+//  <i>Using Signal
+[#if RT_USING_SIGNALS_value == "0"]//[/#if]#define RT_USING_SIGNALS
 // </c>
 
 // <c1>Using Event
