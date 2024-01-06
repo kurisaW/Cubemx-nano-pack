@@ -225,8 +225,8 @@
     <RefParameter Added="true" Comment="OS tick per second" DefaultValue="1000" Group="Basic Configuration" Max="100000" Min="1" Name="RT_TICK_PER_SECOND" TabName="Parameter Settings" Type="integer" Unit="">
         <Description>OS tick per second</Description>
     </RefParameter>
-    <RefParameter Added="true" Comment="RT_USING_SIGNALS" DefaultValue="0" Group="IPC Configuration" Name="RT_USING_SIGNALS" TabName="Parameter Settings" Type="list">
-        <Description>using signal</Description>
+    <RefParameter Added="true" Comment="Using Signal" DefaultValue="0" Group="IPC Configuration" Name="RT_USING_SIGNALS" TabName="Parameter Settings" Type="list">
+        <Description>Using Signal</Description>
         <PossibleValue Comment="Disabled" Value="0"/>
         <PossibleValue Comment="Enabled" Value="1"/>
     </RefParameter>

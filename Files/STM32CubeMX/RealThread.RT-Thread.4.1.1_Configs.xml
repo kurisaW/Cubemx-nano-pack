@@ -3,7 +3,6 @@
     <RefConfig Name="RTOSJjkernel">
         <Component Name="RTOS:kernel:$RTOSJjkernel"/>
         <ConfigFile Name="RTCONFIG_H"/>
-        <ConfigFile Name="RTOSJjkernel_conf"/>
     </RefConfig>
     <RefConfig Name="RTOSJjshell">
         <Component Name="RTOS:shell:$RTOSJjshell"/>
@@ -25,6 +24,7 @@
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_TIMER_SOFT" OptimizationCondition="equal"/>
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_DEVICE" OptimizationCondition="equal"/>
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_TICK_PER_SECOND" OptimizationCondition="equal"/>
+        <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_SIGNALS" OptimizationCondition="equal"/>
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_HEAP" OptimizationCondition="equal"/>
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_IDLE_HOOK" OptimizationCondition="equal"/>
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_ALIGN_SIZE" OptimizationCondition="equal"/>
@@ -40,10 +40,6 @@
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_TIMER_THREAD_PRIO" OptimizationCondition="equal"/>
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_USING_SMALL_MEM" OptimizationCondition="equal"/>
         <Argument Added="true" AddressOf="false" GenericType="simple" Name="RT_MAIN_THREAD_STACK_SIZE" OptimizationCondition="equal"/>
-    </RefConfigFile>
-    <RefConfigFile Added="true" Name="RTOSJjkernel_conf" Template="default_conf.ftl">
-        <File Category="header" Condition="all" Name="./RealThread.RT-Thread_conf.h"/>
-        <Argument AddressOf="false" Comment="RT_USING_SIGNALS" GenericType="simple" Name="RT_USING_SIGNALS" OptimizationCondition="equal"/>
     </RefConfigFile>
     <RefComponent Cclass="RTOS" Cgroup="kernel" Cversion="4Gg1Gg1">
         <File Category="source" Condition="CMSIS Core with RTOS;((SIiDcoreIiCortexAaM0|SIiDcoreIiCortexAaM0Hh|SIiDcoreIiCortexAaM3|SIiDcoreIiCortexAaM4|SIiDcoreIiCortexAaM7|SIiDcoreIiCortexAaM33|SIiDcoreIiCortexAaM23))" Name="src/clock.c"/>

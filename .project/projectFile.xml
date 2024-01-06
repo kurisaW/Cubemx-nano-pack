@@ -228,11 +228,12 @@
         </component>
     </components>
     <examples>
-        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/stm32f103-blink::bsp/stm32f103-blink" name="rt-thread blinky-hal">
-            <description>rt-thread blink example [hal]</description>
-            <board name="NUCLEO-F103RB" vendor="STMicroelectronics"/>
+        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/examples/stm32f407-blink::examples/stm32f407-blink" name="rt-thread led-blink" public="false" version="1.0.0">
+            <description>rt-thread led blink example [hal]</description>
+            <board Dvendor="STMicroelectronics:13" name="stm32f407-rt-spark" vendor="RealThread"/>
             <project>
-                <environment load="Project.uvprojx" name="uv"/>
+                <environment folder="MDK-ARM" load="stm32f407-blink.uvprojx" name="uv"/>
+                <environment folder="stm32f407-blink" load="stm32f407-blink.ioc" name="stm32cubemx"/>
             </project>
             <attributes>
                 <component Cclass="rtthread" Cgroup="Kernel"/>
@@ -240,23 +241,12 @@
                 <category>rt-thread</category>
             </attributes>
         </example>
-        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/stm32f103-ll-blink::bsp/stm32f103-ll-blink" name="rt-thread blinky-ll">
-            <description>rt-thread blink example [ll]</description>
-            <board name="NUCLEO-F103RB" vendor="STMicroelectronics"/>
-            <project>
-                <environment load="Project.uvprojx" name="uv"/>
-            </project>
-            <attributes>
-                <component Cclass="rtthread" Cgroup="Kernel"/>
-                <category>Getting Started</category>
-                <category>rt-thread</category>
-            </attributes>
-        </example>
-        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/bsp/stm32f103-msh::bsp/stm32f103-msh" name="rt-thread msh-hal">
+        <example doc="Abstract.txt" folder="D:/Desktop/nano-v4.1.1/nano-v4.1.1/.project/OriginalPack/examples/stm32f407-msh::examples/stm32f407-msh" name="rt-thread msh-hal" public="false" version="1.0.0">
             <description>rt-thread msh example [hal]</description>
-            <board name="NUCLEO-F103RB" vendor="STMicroelectronics"/>
+            <board Dvendor="STMicroelectronics:13" name="stm32f407-rt-spark" vendor="RealThread"/>
             <project>
-                <environment load="Project.uvprojx" name="uv"/>
+                <environment folder="MDK-ARM" load="stm32f407-msh.uvprojx" name="uv"/>
+                <environment folder="stm32f407-msh" load="stm32f407-msh.ioc" name="stm32cubemx"/>
             </project>
             <attributes>
                 <component Cclass="rtthread" Cgroup="Kernel"/>
